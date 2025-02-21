@@ -135,7 +135,7 @@ const Footer = () => {
             <li><a href="#">Веб-разработка</a></li>
             <li><a href="#">UI/UX Дизайн</a></li>
             <li><a href="#">Мобильные приложения</a></li>
-            <li><a href="#">Консультации</a></li>
+            <li><a href="https://t.me/ne_natasha">Консультации</a></li>
           </ul>
         </FooterColumn>
         <FooterColumn>
@@ -152,7 +152,7 @@ const Footer = () => {
           <ul>
             <li><a href="mailto:contact@example.com">contact@example.com</a></li>
             <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
-            <li><a href="#">Telegram</a></li>
+            <li><a href="https://t.me/ne_natasha">Telegram</a></li>
             <li><a href="#">WhatsApp</a></li>
           </ul>
         </FooterColumn>
@@ -160,7 +160,7 @@ const Footer = () => {
       <FooterBottom>
         <div>© 2024 Все права защищены</div>
         <SocialLinks>
-          <a href="#" aria-label="GitHub"><i className="fab fa-github"></i></a>
+          <a href="https://github.com/9o1ub" aria-label="GitHub"><i className="fab fa-github"></i></a>
           <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
           <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
         </SocialLinks>

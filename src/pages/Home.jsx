@@ -2,10 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import profileImage from '../assets/profile.jpg';
-import mbtiPreview from '../assets/mbti-preview.png';
 import FloatingCards from '../components/FloatingCards';
-import ProjectShowcase from '../components/ProjectShowcase';
+import profileImage from '../assets/profile.jpeg';
 
 const HomeWrapper = styled.div`
   overflow-y: auto;
@@ -69,7 +67,7 @@ const ProfileImage = styled(motion.div)`
   overflow: hidden;
   position: relative;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  background: url(${profileImage}) center center/cover;
+  background: url(${profileImage}) center/cover no-repeat;
 
   @media (max-width: 768px) {
     width: 300px;
@@ -614,14 +612,7 @@ const Home = () => {
     { size: 100, color: "#6c5ce7", x: "50%", y: "85%" }
   ];
 
-  const galleryItems = [
-    {
-      id: 1,
-      image: mbtiPreview,
-      title: "MBTI Тест",
-      description: "Интерактивный тест для определения типа личности"
-    }
-  ];
+  const galleryItems = [];
 
   const floatingImages = [
     { 
@@ -849,8 +840,6 @@ const Home = () => {
         <FloatingCards />
       </CardsScreen>
 
-      <ProjectShowcase />
-
       <SecondScreen ref={secondScreenRef}>
         <ContentSection
           initial={{ opacity: 0, x: -100 }}
@@ -930,47 +919,6 @@ const Home = () => {
           ))}
         </ImageSection>
       </SecondScreen>
-
-      <ThirdScreen ref={thirdScreenRef}>
-        <GalleryTitle
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ 
-            opacity: 1, 
-            y: 0,
-            transition: {
-              type: "spring",
-              stiffness: 100,
-              damping: 15
-            }
-          }}
-          viewport={{ once: true }}
-        >
-          Галерея проектов
-        </GalleryTitle>
-        
-        <GalleryGrid>
-          {galleryItems.map((item, index) => (
-            <GalleryItem
-              key={item.id}
-              variants={galleryItemVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true }}
-            >
-              <img src={item.image} alt={item.title} />
-              <GalleryOverlay
-                variants={overlayVariants}
-                initial="hidden"
-                whileHover="hover"
-              >
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </GalleryOverlay>
-            </GalleryItem>
-          ))}
-        </GalleryGrid>
-      </ThirdScreen>
 
       <Footer
         initial="hidden"

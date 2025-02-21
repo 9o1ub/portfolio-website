@@ -217,15 +217,7 @@ const DetailButton = styled(motion.button)`
 
 const experience = [
   {
-    date: '2022 - Настоящее время',
-    title: 'Senior Frontend Developer',
-    description: 'Разработка высоконагруженных веб-приложений с использованием React, TypeScript и современных технологий. Оптимизация производительности и улучшение пользовательского опыта.',
-    skills: ['React', 'TypeScript', 'Redux', 'Node.js', 'GraphQL'],
-    position: 'right',
-    details: 'Руководство командой разработчиков, внедрение новых технологий и методологий, оптимизация процессов разработки.'
-  },
-  {
-    date: '2020 - 2022',
+    date: '2020 - Настоящее время',
     title: 'Frontend Developer',
     description: 'Создание пользовательских интерфейсов, внедрение новых технологий и методологий разработки. Работа с React, Redux и другими современными инструментами.',
     skills: ['React', 'JavaScript', 'Redux', 'CSS3', 'Webpack'],
